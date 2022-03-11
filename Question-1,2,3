@@ -1,0 +1,112 @@
+#1. Write a function that finds the sum of the 
+#a) first n odd terms 
+#b) first n even terms
+#c) 1, 2, 3,4,5,6,7,8,9,.. till n-term
+#a
+def odd():
+    n = int(input("Enter how many odd numbers you want to add-  "))
+    sum=0
+    count=0
+    i=1
+    while(count<n):
+      if(i%2!=0):
+        sum=sum+i
+        count=count+1
+      i=i+1
+    print("sum of the numbers is:",sum)    
+odd()
+#b
+def even():
+    n = int(input("Enter how many even numbers you want to add-  "))
+    sum=0
+    count=0
+    i=1
+    while(count<n):
+      if(i%2==0):
+        sum=sum+i
+        count=count+1
+      i=i+1
+    print("sum of the numbers is:",sum)  
+even()
+#c
+def sum_natural():
+  num=int(input("Enter how many numbers you want to add : "))
+  sum=num*(num+1)
+  result=sum/2
+  return(result)
+sum_natural()
+
+
+#2. Consider a tuple t1=(1,2,5,7,9,2,4,6,8,10). Write a program to perform following 
+#operations:
+#a. Print half the values of tuple in one line and the other half in the next line.
+#b. Print another tuple whose values are even numbers in the given tuple.
+#c. Concatenate a tuple t2=(11,13,15) witht1.
+#d. Return maximum and minimum value from this tuple
+t1=(1,2,5,7,9,2,4,6,8,10)
+#a
+def printing():
+    
+    length = int(len(t1)/2)
+    print(t1[:length])
+    print(t1[length:])
+printing()
+
+#b
+def even_tup():
+ t3=()
+ for i in t1:
+  if i %2==0:
+    list_1=list(t3)
+    list_1.append(i)
+    new=tuple(list_1)
+  else:
+    continue
+ print(new)
+even_tup()
+#c
+def concatenate_():
+  t2=(11,13,15)
+  print(t1+t2)
+concatenate_()
+#d
+def values():
+  a=min(t1)
+  b=max(t1)
+  print("The min value is ",a)
+  print("The max value is ",b)
+values()
+
+
+#3. Write a menu driven program to perform the following functions on strings:
+#a. Find the length of string
+#b.return max of three strings
+#c. Accept a string and replace every successive character with ‘#’ ExampleFor Given string ‘Hello World’ returned string is ‘H#l#o W#r#d’.
+#d. Find number of words in the given string
+str1=input("Enter a String ")
+#a
+def length(str1):
+    l = len(str1)
+    print("Length of given string is : ",l)
+length(str1)
+#c
+def changer_hash(str1):
+    str2 = ''
+    for i in range(0, len(str1)):
+        if str1[i] == ' ':
+            str2+= ' '
+        elif i%2 == 0:
+            str2+= str1[i]
+        else:
+            str2+= '#'
+    print(str2)
+changer_hash(str1)
+#d
+def count_word(str1):
+    s = str1.split()
+    l = len(s)
+    print("number of words in the given string are : ", l)
+count_word(str1)
+
+
+ 
